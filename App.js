@@ -6,7 +6,7 @@ import { SignUpOption1, SignUpOption2, SignUpOption3 } from './src/screens/SignU
 
 export default function App() {
   return (
-    <SignUpOption3/>
+    <SignUpOption1/>
   );
 }
 

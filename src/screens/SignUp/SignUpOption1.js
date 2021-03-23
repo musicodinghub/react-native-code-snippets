@@ -9,6 +9,7 @@ const Input = ({ placeholder, secureTextEntry }) => {
         secureTextEntry={secureTextEntry ? true : false}
         placeholder={placeholder}
         placeholderTextColor="#BCE0FD"
+        autoCapitalize="none"
         style={{
           marginLeft: 20,
           color: '#2699FB',
