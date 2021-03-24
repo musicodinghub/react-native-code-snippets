@@ -3,10 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { SignUpOption1, SignUpOption2, SignUpOption3 } from './src/screens/SignUp/';
+import { ActivityFeed } from './src/screens/Feed';
+
 
 export default function App() {
   return (
-    <SignUpOption1/>
+    <ActivityFeed/>
   );
 }
 
