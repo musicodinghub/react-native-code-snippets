@@ -8,11 +8,11 @@ const ActivityFeed = ({ params }) => {
     id: 1,
     userName: 'Name Surname',
     avatar: 'https://musicoding.com/content/images/apps/avatar.png',
-    content: 'Eiusmod tempor quis ex aliquip non ipsum minim reprehenderit esse quis deserunt eiusmod proident id. Aliqua laborum pariatur amet pariatur sunt anim. Irure irure ex exercitation ipsum. Consequat duis aliqua nisi mollit eiusmod id adipisicing pariatur aliquip enim ad quis. Consequat dolore sint nisi dolore in. Ipsum reprehenderit amet ipsum amet adipisicing cillum id labore sit elit nisi ex tempor sit. Magna voluptate sunt esse nisi nostrud consectetur ea non laboris amet adipisicing.',
+    content: 'Eiusmod tempor quis ex aliquip non ipsum minim reprehenderit esse quis deserunt eiusmod proident id. Aliqua laborum pariatu...',
     timeAgo: '1h ago'
   }));
 
-  const _renderItem = ({item}) => {
+  const _renderItem = ({item, index}) => {
     return (
       <Card>
         <CardContent>
@@ -42,7 +42,7 @@ const ActivityFeed = ({ params }) => {
       </Card>
     )
   }
-  
+
   return (
     <Container>
       <StatusBar hidden={true} />
@@ -51,7 +51,7 @@ const ActivityFeed = ({ params }) => {
         <Title>{'ACTIVITY FEED'}</Title>
         <Icon source={{uri: 'https://musicoding.com/content/images/apps/search_icon.png'}}/>
       </NavBar>
-      <FlatList keyExtractor={(_, index) => index} data={data} renderItem={_renderItem}/>
+      <FlatList keyExtractor={(_, index) => ''+index} data={data} renderItem={_renderItem}/>
     </Container>
   );
 };
