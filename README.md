@@ -9,4 +9,4 @@ This is free UI code snippets, resources and components for React Native which w
 | SignUp | SignUp UI Example | ✅ |
 | Activity Feed | Activity Feed UI Example | ✅ |
 | Profile | Profile UI Example | ✅ |
-| Onboarding | Onboarding UI Example |  |
+| Messaging | Messaging UI Example | ✅ |
