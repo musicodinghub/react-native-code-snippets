@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Text, View, StatusBar, FlatList } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
-const ActivityFeed = ({ params }) => {
+const ActivityFeed = ({ navigation }) => {
 
   const [data, setData] = useState(new Array(10).fill({
     id: 1,
@@ -47,7 +48,11 @@ const ActivityFeed = ({ params }) => {
     <Container>
       <StatusBar hidden={true} />
       <NavBar>
-        <Icon source={{uri: 'https://musicoding.com/content/images/apps/menu_icon.png'}}/>
+        <TouchableOpacity onPress={()=>{
+          navigation.toggleDrawer();
+        }}>
+          <Icon source={{uri: 'https://musicoding.com/content/images/apps/menu_icon.png'}}/>
+        </TouchableOpacity>
         <Title>{'ACTIVITY FEED'}</Title>
         <Icon source={{uri: 'https://musicoding.com/content/images/apps/search_icon.png'}}/>
       </NavBar>

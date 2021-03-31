@@ -6,10 +6,11 @@ import { SignUpOption1, SignUpOption2, SignUpOption3 } from './src/screens/SignU
 import { ActivityFeed } from './src/screens/Feed';
 import { ProfileOption1, ProfileOption2 } from './src/screens/Profile';
 import { MessagingOption1 } from './src/screens/Messaging';
+import { DrawerMenu } from './src/screens/Menu';
 
 export default function App() {
   return (
-    <MessagingOption1/>
+    <DrawerMenu/>
   );
 }
 

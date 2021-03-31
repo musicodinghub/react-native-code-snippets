@@ -1,15 +1,20 @@
 import React from 'react';
 import { View, StatusBar, Image, ScrollView } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
 const MENU = {uri: 'https://musicoding.com/content/images/apps/menu_icon.png', width: 16, height: 16};
 const SEARCH = {uri: 'https://musicoding.com/content/images/apps/search_icon.png', width: 16, height: 16};
 const AVATAR = {uri: 'https://musicoding.com/content/images/apps/avatar_white.png', width: 96, height: 96};
 
-const NavBar = () => {
+const NavBar = ({navigation}) => {
   return (
     <NavBarView>
-      <Image source={MENU}/>
+      <TouchableOpacity onPress={()=>{
+        navigation.toggleDrawer();
+      }}>
+        <Image source={MENU}/>
+      </TouchableOpacity>
       <Text bold>PROFILE</Text>
       <Image source={SEARCH}/>
     </NavBarView>
@@ -25,12 +30,12 @@ const Tag = ({tag}) => {
 }
 
 const ProfileOption2 = ({
-    params,
+    navigation,
 }) => {
   return (
     <Container>
       <StatusBar hidden={true}/>
-      <NavBar/>
+      <NavBar navigation={navigation}/>
       <ScrollView contentContainerStyle={{alignItems: 'center'}}>
         <AvatarView>
           <Image source={AVATAR}/>

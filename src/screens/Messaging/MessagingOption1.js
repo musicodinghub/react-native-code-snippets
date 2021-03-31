@@ -8,10 +8,14 @@ const FORWARD_ARROW = {uri: 'https://musicoding.com/content/images/apps/forward_
 const SENDER = {uri: 'https://musicoding.com/content/images/apps/avatar.png', width: 40, height: 40};
 const RECEIVER = {uri: 'https://musicoding.com/content/images/apps/avatar2.png', width: 40, height: 40};
 
-const NavBar = () => {
+const NavBar = ({navigation}) => {
   return (
     <NavBarView>
+      <TouchableOpacity onPress={()=>{
+        navigation.toggleDrawer();
+      }}>
       <Image source={BACKWARD_ARROW}/>
+      </TouchableOpacity>
       <Text bold>John Doe</Text>
       <View style={{width:16}}></View>
     </NavBarView>
@@ -19,7 +23,7 @@ const NavBar = () => {
 }
 
 const MessagingOption1 = ({
-    params,
+    navigation,
 }) => {
   const flatListRef = useRef();
   const [msg, setMsg] = useState('');
@@ -109,7 +113,7 @@ const MessagingOption1 = ({
   return (
     <Container>
       <StatusBar hidden={true}/>
-      <NavBar/>
+      <NavBar navigation={navigation}/>
       <KeyboardAvoidingView behavior={'padding'} style={{flex:1}}>
         <FlatList keyExtractor={(_, index)=>''+index} data={msgList} renderItem={_renderItem}
           extraData={msgList}
