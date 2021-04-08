@@ -25,9 +25,9 @@ import {
 } from '@react-navigation/drawer';
 import styled from 'styled-components/native';
 
-import { ActivityFeed } from '../Feed';
-import { MessagingOption1 } from '../Messaging';
-import { ProfileOption1, ProfileOption2 } from '../Profile';
+// import { ActivityFeed } from '../Feed';
+// import { MessagingOption1 } from '../Messaging';
+// import { ProfileOption1, ProfileOption2 } from '../Profile';
 
 const AVATAR = {uri: 'https://musicoding.com/content/images/apps/avatar.png'};
 const FACEBOOK = {uri: 'https://musicoding.com/content/images/apps/facebook_white_icon.png'};
@@ -96,9 +96,9 @@ const StackNavigator = () => {
       <Stack.Screen name="Videos" component={VideosScreen}/>
       <Stack.Screen name="Settings" component={SettingsScreen}/>
       {/* you can define other screens stack here */}
-      <Stack.Screen name="Feed" component={ActivityFeed} options={{headerShown: false}}/>
+      {/* <Stack.Screen name="Feed" component={ActivityFeed} options={{headerShown: false}}/>
       <Stack.Screen name="Messages" component={MessagingOption1} options={{headerShown: false}}/>
-      <Stack.Screen name="Profile" component={ProfileOption2} options={{headerShown: false}}/>
+      <Stack.Screen name="Profile" component={ProfileOption2} options={{headerShown: false}}/> */}
     </Stack.Navigator>
   )
 }

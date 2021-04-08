@@ -10,11 +10,7 @@ const AVATAR = {uri: 'https://musicoding.com/content/images/apps/avatar_white.pn
 const NavBar = ({navigation}) => {
   return (
     <NavBarView>
-      <TouchableOpacity onPress={()=>{
-        navigation.toggleDrawer();
-      }}>
-        <Image source={MENU}/>
-      </TouchableOpacity>
+      <Image source={MENU}/>
       <Text bold>PROFILE</Text>
       <Image source={SEARCH}/>
     </NavBarView>

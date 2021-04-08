@@ -11,11 +11,7 @@ const RECEIVER = {uri: 'https://musicoding.com/content/images/apps/avatar2.png',
 const NavBar = ({navigation}) => {
   return (
     <NavBarView>
-      <TouchableOpacity onPress={()=>{
-        navigation.toggleDrawer();
-      }}>
       <Image source={BACKWARD_ARROW}/>
-      </TouchableOpacity>
       <Text bold>John Doe</Text>
       <View style={{width:16}}></View>
     </NavBarView>

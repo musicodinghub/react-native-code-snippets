@@ -48,11 +48,7 @@ const ActivityFeed = ({ navigation }) => {
     <Container>
       <StatusBar hidden={true} />
       <NavBar>
-        <TouchableOpacity onPress={()=>{
-          navigation.toggleDrawer();
-        }}>
-          <Icon source={{uri: 'https://musicoding.com/content/images/apps/menu_icon.png'}}/>
-        </TouchableOpacity>
+        <Icon source={{uri: 'https://musicoding.com/content/images/apps/menu_icon.png'}}/>
         <Title>{'ACTIVITY FEED'}</Title>
         <Icon source={{uri: 'https://musicoding.com/content/images/apps/search_icon.png'}}/>
       </NavBar>
