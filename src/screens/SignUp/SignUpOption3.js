@@ -39,7 +39,7 @@ const SignUpOption3 = ({ params }) => {
         </Button>
         <Button color="#fff">
           <Image
-            source={{uri: "https://musicoding.com/content/images/apps/facebook_icon.png"}}
+            source={require('../../../assets/images/facebook_icon.png')}
             style={{ width:16, height:16, position: 'relative', right: 51 }}
           />
           <ButtonText color="#2699fb">LOGIN WITH FACEBOOK</ButtonText>

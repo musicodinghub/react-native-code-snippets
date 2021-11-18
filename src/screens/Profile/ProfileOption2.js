@@ -3,16 +3,12 @@ import { View, StatusBar, Image, ScrollView } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
-const MENU = {uri: 'https://musicoding.com/content/images/apps/menu_icon.png', width: 16, height: 16};
-const SEARCH = {uri: 'https://musicoding.com/content/images/apps/search_icon.png', width: 16, height: 16};
-const AVATAR = {uri: 'https://musicoding.com/content/images/apps/avatar_white.png', width: 96, height: 96};
-
 const NavBar = ({navigation}) => {
   return (
     <NavBarView>
-      <Image source={MENU}/>
+      <Image source={require('../../../assets/images/menu_icon.png')} style={{width: 16, height: 16}}/>
       <Text bold>PROFILE</Text>
-      <Image source={SEARCH}/>
+      <Image source={require('../../../assets/images/search_icon.png')} style={{width: 16, height: 16}}/>
     </NavBarView>
   )
 }
@@ -34,7 +30,7 @@ const ProfileOption2 = ({
       <NavBar navigation={navigation}/>
       <ScrollView contentContainerStyle={{alignItems: 'center'}}>
         <AvatarView>
-          <Image source={AVATAR}/>
+          <Image source={require('../../../assets/images/avatar_white.png')} style={{width: 96, height: 96}}/>
         </AvatarView>
         <ProfileView>
           <View style={{marginBottom:20, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>

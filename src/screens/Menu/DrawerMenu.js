@@ -37,39 +37,39 @@ const INSTAGRAM = {uri: 'https://musicoding.com/content/images/apps/instagram_wh
 const MENUS =[{
   name: 'Feed',
   label: 'FEED',
-  icon: {uri: 'https://musicoding.com/content/images/apps/feed_white_icon.png'}
+  icon: require('../../../assets/images/feed_white_icon.png')
 },{
   name: 'Explore',
   label: 'EXPLORE',
-  icon: {uri: 'https://musicoding.com/content/images/apps/explore_white_icon.png'}
+  icon: require('../../../assets/images/explore_white_icon.png')
 },{
   name: 'Messages',
   label: 'MESSAGES',
-  icon: {uri: 'https://musicoding.com/content/images/apps/messages_white_icon.png'}
+  icon: require('../../../assets/images/messages_white_icon.png')
 },{
   name: 'Notifications',
   label: 'NOTIFICATIONS',
-  icon: {uri: 'https://musicoding.com/content/images/apps/alert_white_icon.png'}
+  icon: require('../../../assets/images/alert_white_icon.png')
 },{
   name: 'Photos',
   label: 'PHOTOS',
-  icon: {uri: 'https://musicoding.com/content/images/apps/photos_white_icon.png'}
+  icon: require('../../../assets/images/photos_white_icon.png')
 },{
   name: 'Videos',
   label: 'VIDEOS',
-  icon: {uri: 'https://musicoding.com/content/images/apps/videos_white_icon.png'}
+  icon: require('../../../assets/images/videos_white_icon.png')
 },{
   name: 'Places',
   label: 'PLACES',
-  icon: {uri: 'https://musicoding.com/content/images/apps/places_white_icon.png'}
+  icon: require('../../../assets/images/places_white_icon.png')
 },{
   name: 'Settings',
   label: 'SETTINGS',
-  icon: {uri: 'https://musicoding.com/content/images/apps/settings_white_icon.png'}
+  icon: require('../../../assets/images/settings_white_icon.png')
 },{
   name: 'Search',
   label: 'SEARCH',
-  icon: {uri: 'https://musicoding.com/content/images/apps/search_white_icon.png'}
+  icon: require('../../../assets/images/search_white_icon.png')
 },]
 
 const VideosScreen = () => {
@@ -112,7 +112,7 @@ const CustomDrawerContent = (props) => {
         props.navigation.closeDrawer();
       }} >
         <Header>
-          <Avatar source={AVATAR}/>
+          <Avatar source={require('../../../assets/images/avatar.png')} style={{width: 50, height: 50, borderRadius:50}}/>
           <View style={{justifyContent: 'flex-start', alignItems: 'flex-start', marginLeft: 16 }}>
             <Text color='#fff' size='14px' bold>John Doe</Text>
             <Text color='#fff' size='10px'>San Francisco, CA</Text>
@@ -145,13 +145,13 @@ const CustomDrawerContent = (props) => {
       </DrawerContentScrollView>
       <Footer>
         <TouchableOpacity>
-          <Icon source={FACEBOOK} style={{marginRight: 32}}/>
+          <Icon source={require('../../../assets/images/facebook_white_icon.png')} style={{marginRight: 32}}/>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Icon source={INSTAGRAM} style={{marginRight: 32}}/>
+          <Icon source={require('../../../assets/images/twitter_white_icon.png')} style={{marginRight: 32}}/>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Icon source={TWITTER} style={{marginRight: 32}}/>
+          <Icon source={require('../../../assets/images/instagram_white_icon.png')} style={{marginRight: 32}}/>
         </TouchableOpacity>
       </Footer>
     </SideBarContainer>

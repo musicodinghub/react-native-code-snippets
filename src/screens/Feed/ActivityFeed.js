@@ -8,7 +8,7 @@ const ActivityFeed = ({ navigation }) => {
   const [data, setData] = useState(new Array(10).fill({
     id: 1,
     userName: 'Name Surname',
-    avatar: 'https://musicoding.com/content/images/apps/avatar.png',
+    avatar: require('../../../assets/images/avatar.png'),
     content: 'Eiusmod tempor quis ex aliquip non ipsum minim reprehenderit esse quis deserunt eiusmod proident id. Aliqua laborum pariatu...',
     timeAgo: '1h ago'
   }));
@@ -19,7 +19,7 @@ const ActivityFeed = ({ navigation }) => {
         <CardContent>
           <Header>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Avatar source={{uri:item.avatar}} />
+              <Avatar source={item.avatar} />
               <UserName>{item.userName}</UserName>
             </View>
             <Time>{item.timeAgo}</Time>
@@ -30,10 +30,10 @@ const ActivityFeed = ({ navigation }) => {
           <Image></Image>
           <Footer>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Icon source={{uri:'https://musicoding.com/content/images/apps/like_icon.png'}}/>
+              <Icon source={require('../../../assets/images/like_icon.png')}/>
               <Number>609</Number>
               <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 32}}>
-                <Icon source={{uri:'https://musicoding.com/content/images/apps/comments_icon.png'}}/>
+                <Icon source={require('../../../assets/images/comments_icon.png')}/>
                 <Number>120</Number>
               </View>
             </View>
@@ -48,9 +48,9 @@ const ActivityFeed = ({ navigation }) => {
     <Container>
       <StatusBar hidden={true} />
       <NavBar>
-        <Icon source={{uri: 'https://musicoding.com/content/images/apps/menu_icon.png'}}/>
+        <Icon source={{uri: '../../../assets/images/menu_icon.png'}}/>
         <Title>{'ACTIVITY FEED'}</Title>
-        <Icon source={{uri: 'https://musicoding.com/content/images/apps/search_icon.png'}}/>
+        <Icon source={{uri: '../../../assets/images/search_icon.png'}}/>
       </NavBar>
       <FlatList keyExtractor={(_, index) => ''+index} data={data} renderItem={_renderItem}/>
     </Container>
@@ -93,6 +93,7 @@ const Header = styled.View`
 const Avatar = styled.Image`
   width: 40px;
   height: 40px;
+  border-radius: 40px;
 `;
 const UserName = styled.Text`
   color: #2699fb;

@@ -10,3 +10,4 @@ This is free UI code snippets, resources and components for React Native which w
 | Activity Feed | Activity Feed UI Example | ✅ |
 | Profile | Profile UI Example | ✅ |
 | Messaging | Messaging UI Example | ✅ |
+| Drawer Menu | Drawer Menu UI Example | ✅ |

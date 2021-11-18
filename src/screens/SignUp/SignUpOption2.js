@@ -6,7 +6,7 @@ const Input = ({ icon, placeholder, secureTextEntry }) => {
   return (
     <InputField>
       <View style={{ flexDirection: 'row' }}>
-        <Icon source={{ uri: icon }} />
+        <Icon source={icon} />
         <TextInput
           secureTextEntry={secureTextEntry ? true : false}
           placeholder={placeholder}
@@ -27,7 +27,7 @@ const Input = ({ icon, placeholder, secureTextEntry }) => {
 const SocialAppIcon = ({ icon }) => {
   return (
     <SocialAppIconView>
-      <Icon source={{ uri: icon }} />
+      <Icon source={icon} />
     </SocialAppIconView>
   );
 };
@@ -37,15 +37,15 @@ const SignUpOption2 = ({ params }) => (
     <StatusBar hidden={true} />
     <SignUpView>
       <Input
-        icon="https://musicoding.com/content/images/apps/user_icon.png"
+        icon={require('../../../assets/images/user_icon.png')}
         placeholder="Full name"
       />
       <Input
-        icon="https://musicoding.com/content/images/apps/mail_icon.png"
+        icon={require('../../../assets/images/mail_icon.png')}
         placeholder="Email"
       />
       <Input
-        icon="https://musicoding.com/content/images/apps/lock_icon.png"
+        icon={require('../../../assets/images/lock_icon.png')}
         secureTextEntry={true}
         placeholder="Password"
       />
@@ -53,9 +53,9 @@ const SignUpOption2 = ({ params }) => (
         <ButtonText>CONTINUTE</ButtonText>
       </Button>
       <SocialAppGroup>
-        <SocialAppIcon icon="https://musicoding.com/content/images/apps/facebook_icon.png" />
-        <SocialAppIcon icon="https://musicoding.com/content/images/apps/twitter_icon.png" />
-        <SocialAppIcon icon="https://musicoding.com/content/images/apps/google_icon.png" />
+        <SocialAppIcon icon={require('../../../assets/images/facebook_icon.png')} />
+        <SocialAppIcon icon={require('../../../assets/images/twitter_icon.png')} />
+        <SocialAppIcon icon={require('../../../assets/images/google_icon.png')} />
       </SocialAppGroup>
       <HaveAccountText>Already have an account?</HaveAccountText>
     </SignUpView>

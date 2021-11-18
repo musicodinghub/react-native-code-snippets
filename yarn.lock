@@ -5428,6 +5428,13 @@ react-native-screens@~2.15.2:
   resolved "https://registry.npm.taobao.org/react-native-screens/download/react-native-screens-2.15.2.tgz?cache=0&sync_timestamp=1614692495992&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-native-screens%2Fdownload%2Freact-native-screens-2.15.2.tgz#a449700e895b462937211ec72ed6f09652758f06"
   integrity sha1-pElwDolbRik3IR7HLtbwllJ1jwY=
 
+react-native-sectionlist-contacts@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.npm.taobao.org/react-native-sectionlist-contacts/download/react-native-sectionlist-contacts-1.1.3.tgz#da200e1fa9667082e9418929087e0d807ea8eee8"
+  integrity sha1-2iAOH6lmcILpQYkpCH4NgH6o7ug=
+  dependencies:
+    lodash "^4.17.11"
+
 react-native-web@~0.13.12:
   version "0.13.18"
   resolved "https://registry.npm.taobao.org/react-native-web/download/react-native-web-0.13.18.tgz#964f058a16521a3b9a31b091415edfef5b6ef305"

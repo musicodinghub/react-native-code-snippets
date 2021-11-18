@@ -2,19 +2,13 @@ import React from 'react';
 import { View, StatusBar, Image, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 
-const MENU = {uri: 'https://musicoding.com/content/images/apps/menu_icon.png', width: 16, height: 16};
-const MORE = {uri: 'https://musicoding.com/content/images/apps/more_icon.png', width: 3, height: 16};
-const LIKE = {uri: 'https://musicoding.com/content/images/apps/like_white_icon.png', width: 16, height: 16};
-const COMMENTS = {uri: 'https://musicoding.com/content/images/apps/comments_white_icon.png', width: 16, height: 16};
-const AVATAR = {uri: 'https://musicoding.com/content/images/apps/avatar.png', width: 40, height: 40};
-
 const NavBar = () => {
   return (
     <NavBarView>
-      <Image source={MENU}/>
+      <Image source={require('../../../assets/images/menu_icon.png')} style={{width: 16, height: 16}}/>
       <Text bold>PROFILE</Text>
       <View style={{width: 16, alignItems: 'center'}}>
-        <Image source={MORE}/>
+        <Image source={require('../../../assets/images/more_icon.png')} style={{width: 3, height: 16}}/>
       </View>
     </NavBarView>
   )
@@ -33,10 +27,10 @@ const Card = () => {
     <CardView>
       <Footer>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <Image source={LIKE}/>
+          <Image source={require('../../../assets/images/like_white_icon.png')} style={{width: 16, height: 16}}/>
           <Text size='14px' bold color='#fff' style={{marginLeft: 8}}>609</Text>
           <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 32}}>
-            <Image source={COMMENTS}/>
+            <Image source={require('../../../assets/images/comments_white_icon.png')} style={{width: 16, height: 16}}/>
             <Text size='14px' bold color='#fff' style={{marginLeft: 8}}>120</Text>
           </View>
         </View>
@@ -54,7 +48,7 @@ const ProfileOption1 = ({
       <StatusBar hidden={true}/>
       <NavBar/>
       <ScrollView contentContainerStyle={{alignItems: 'center'}}>
-        <Image source={AVATAR}/>
+        <Image source={require('../../../assets/images/avatar.png')} style={{width: 60, height: 60}}/>
         <Text size='20px' bold style={{marginTop: 16}}>John Doe</Text>
         <Text size='10px'>San Francisco, CA</Text>
         <Text size='14px' style={{marginTop: 30}}>

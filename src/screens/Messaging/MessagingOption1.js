@@ -3,15 +3,10 @@ import { View, StatusBar, Image, TextInput, FlatList, KeyboardAvoidingView, Touc
 import styled from 'styled-components/native';
 import moment from 'moment';
 
-const BACKWARD_ARROW = {uri: 'https://musicoding.com/content/images/apps/backward_arrow_icon.png', width: 16, height: 16};
-const FORWARD_ARROW = {uri: 'https://musicoding.com/content/images/apps/forward_arrow_icon.png', width: 16, height: 16};
-const SENDER = {uri: 'https://musicoding.com/content/images/apps/avatar.png', width: 40, height: 40};
-const RECEIVER = {uri: 'https://musicoding.com/content/images/apps/avatar2.png', width: 40, height: 40};
-
 const NavBar = ({navigation}) => {
   return (
     <NavBarView>
-      <Image source={BACKWARD_ARROW}/>
+      <Image source={require('../../../assets/images/backward_arrow_icon.png')} style={{width: 16, height: 16}} />
       <Text bold>John Doe</Text>
       <View style={{width:16}}></View>
     </NavBarView>
@@ -24,13 +19,13 @@ const MessagingOption1 = ({
   const flatListRef = useRef();
   const [msg, setMsg] = useState('');
   const [msgList, setMsgList] = useState([{
-      id: 1, sent: true, msg: 'Qui dolor deserunt sindo culpa fugiat culpa.', avatar: SENDER
+      id: 1, sent: true, msg: 'Qui dolor deserunt sindo culpa fugiat culpa.', avatar: require('../../../assets/images/avatar.png')
     },{
-      id: 2, sent: false, msg: 'Aliqua minim commodo proident amet do minim amet sit.', avatar: RECEIVER
+      id: 2, sent: false, msg: 'Aliqua minim commodo proident amet do minim amet sit.', avatar: require('../../../assets/images/avatar2.png')
     },{
-      id: 3, sent: true, msg: 'Est officia excepteur duis laborum est ullamco elit.', avatar: SENDER
+      id: 3, sent: true, msg: 'Est officia excepteur duis laborum est ullamco elit.', avatar: require('../../../assets/images/avatar.png')
     },{
-      id: 4, sent: true, msg: 'Officia elit aliquip enim tempor excepteur sunt voluptate incididunt ut ullamco duis.', avatar: SENDER
+      id: 4, sent: true, msg: 'Officia elit aliquip enim tempor excepteur sunt voluptate incididunt ut ullamco duis.', avatar: require('../../../assets/images/avatar.png')
     }
   ])
 
@@ -50,7 +45,7 @@ const MessagingOption1 = ({
           </View>
           <View style={{justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}}>
             <TriangleRight/>
-            <Image source={item.avatar}/>
+            <Image source={item.avatar} style={{width:40, height: 40, borderRadius: 40}}/>
           </View>
         </MessageItemView>
       </View>
@@ -63,7 +58,7 @@ const MessagingOption1 = ({
         ):(<View/>)}
       <MessageItemView style={{marginLeft: 24}}>
         <View style={{justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}}>
-          <Image source={item.avatar}/>
+          <Image source={item.avatar} style={{width:40, height: 40, borderRadius: 40}}/>
           <TriangleLeft/>
         </View>
         <View style={{justifyContent: 'flex-start', alignItems: 'flex-start', flexDirection: 'row'}}>
@@ -83,7 +78,7 @@ const MessagingOption1 = ({
         id: Math.floor((Math.random() * 9999) + 1),
         sent: true,
         msg: msg,
-        avatar: SENDER
+        avatar: require('../../../assets/images/avatar.png')
       })
       setMsgList(messages);
       Keyboard.dismiss();
@@ -99,7 +94,7 @@ const MessagingOption1 = ({
         id: Math.floor((Math.random() * 9999) + 1),
         sent: false,
         msg: msg,
-        avatar: RECEIVER
+        avatar: require('../../../assets/images/avatar2.png')
       })
       setMsg('');
       setMsgList(messages);
@@ -129,7 +124,7 @@ const MessagingOption1 = ({
               onSubmitEditing={()=>{_onClickSend()}}
             ></TextInput>
             <TouchableOpacity onPress={()=>_onClickSend()}>
-            <Image source={FORWARD_ARROW}/>
+            <Image source={require('../../../assets/images/backward_arrow_icon.png')}/>
             </TouchableOpacity>
           </InputField>
         </InputView>
