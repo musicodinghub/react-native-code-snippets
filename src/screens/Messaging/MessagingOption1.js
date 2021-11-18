@@ -53,7 +53,7 @@ const MessagingOption1 = ({
       <View>
         {msgList.length - 1 === index? (
         <Text size='14px' color='#2699fb' bold style={{paddingVertical: 14, paddingHorizontal: 14}}>
-        {moment().format('dddd, mm:ss a')}
+        {moment().format('dddd, hh:mm:ss a')}
         </Text>
         ):(<View/>)}
       <MessageItemView style={{marginLeft: 24}}>
